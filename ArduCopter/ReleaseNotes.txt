@@ -1,5 +1,38 @@
 ArduPilot Copter Release Notes:
 ------------------------------------------------------------------
+Copter 3.6.0-rc1 19-Apr-2018
+Changes from 3.5.5
+1) ChibiOS support including F4BY, OpenPilot Revo Mini, TauLabs Sparky2 boards
+2) New Loiter
+    a) faster roll and pitch response
+    b) braking
+    c) parameters moved to start with LOIT_ (was WPNAV_LOIT_)
+3) SmartRTL
+4) Follow mode (allows following without relying on ground station commands)
+5) Battery failsafe allows two stages of actions depending upon voltage level
+6) New sensors/drivers:
+    a) Marvelmind for Non-GPS navigation
+    b) RPLidarA2/A3 for object avoidance
+    c) Winch for lowering packages without landing
+7) Miscellaneous changes and enhancements:
+    a) Auxiliary switch to enable/disable RC overrides from ground station joystick
+    b) LAND_ALT_LOW parameter allows setting altitude at which vehicle slows to LAND_SPEED in Land and RTL modes
+    c) PILOT_SPEED_UP, PILOT_SPEED_DN allow different max climb and descent rates in AltHold, Loiter, PosHold
+8) TradHeli improvements:
+    a) Support for H3-135/140 swashplates
+    b) Reversed collective option for leading/trailing edge control
+    c) Alt Hold angle limiter fix
+    d) Five point spline-smoothed throttle curve
+    e) Variable pitch quadcopter support (aka HeliQuad)
+9) parameter name changes:
+    a) ACC_ parameters renamed to PSC_ACC
+    b) POS_ parameters renamed to PSC_POS
+    c) VEL_ parameters renamed to PSC_VEL
+    d) WPNAV_LOIT_ params renamed to LOIT_
+    e) FS_BATT_ACTION renamed to BATT_FS_ACTION
+    f) PILOT_VELZ_MAX to PILOT_SPEED_UP (and PILOT_SPEED_DN)
+10) dataflash log NTUN essage renamed to PSC
+------------------------------------------------------------------
 Copter 3.5.5-rc1 24-Jan-2018
 Changes from 3.5.4
 1) ICM20948 compass orientation fix
